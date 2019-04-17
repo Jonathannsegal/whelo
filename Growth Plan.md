@@ -1,2 +1,0 @@
-# Groth Plan
-
