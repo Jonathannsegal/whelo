@@ -27,6 +27,7 @@ This is going to be a step by step process on how we are going to further the pr
     * add customizability to groups
     * add location data to groups
 4. Create a location-based way to add new users and through a special code (a way that requires the two users to know each other)
+
 5. Create a map based global feel function that sorts data by location
     * map that you can find a certain area to look through data
     * interface to see data from location
@@ -42,5 +43,6 @@ This is going to be a step by step process on how we are going to further the pr
     * story
     * etc
 8. Incorporate as an LLC in Deleware
+
 9. Test with a limited number of users to see how the app is being used
     * based on user feedback make additional updates to the system.
