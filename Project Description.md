@@ -1,6 +1,4 @@
-# Information
-
-## Breif
+## **Breif**
  A simple hyper-localized social texing platform built to connect you with those around you in a meaninfull way while emphesizing privacy and the importance of the personal connection.
  -
 
