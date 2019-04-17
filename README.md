@@ -1,3 +1,3 @@
-# Web Client
+# Front End
 
 Init
