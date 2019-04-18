@@ -1,4 +1,4 @@
-# Plan of Action (Plan till launch)
+# Plan for Summer 2019
 This is going to be a step by step process on how we are going to further the product.
 
 1. Start creating the website in react
