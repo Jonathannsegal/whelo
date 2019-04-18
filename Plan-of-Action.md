@@ -31,5 +31,8 @@ This is going to be a step by step process on how we are going to further the pr
     * etc
 8. Incorporate as an LLC
 
-9. Test with a limited number of users to see how the app is being used
+9. Create a Sales and Marketing team
+    * work on a plan to advertize the product
+
+10. Test with a limited number of users to see how the app is being used
     * based on user feedback make additional updates to the system.
