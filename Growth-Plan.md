@@ -1,13 +1,11 @@
-# Plan
+# **Executive summary**
 
-## **Executive summary**
+# **Opportunity**
 
-## **Opportunity**
+# **Execution**
 
-## **Execution**
+# **Company and management summary**
 
-## **Company and management summary**
+# **Financial plan**
 
-## **Financial plan**
-
-## **Appendix**
+# **Appendix**
