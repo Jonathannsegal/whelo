@@ -34,14 +34,7 @@ Our goal is to connect people with those around them in meaningfull ways to buil
     <td>Revenue will be made from the platform eventually after we are able to generate a significant user base. We will try to get Outside funding from investors to offset costs until profitability once we have a fully fledged product.</td>
     <td>Expenses include hosting costs for the backend. Most things at this point are free such as the tools we are using Trello, Slack, Gitlab. We are also not going to receive profit until we are making money (Agreements will be renegotiated before them). At this point there are not many expenses</td>
  </tr>
- </table>
-
- ## **Milestones**
-Our goal is to connect people with those around them in meaningfull ways to build communities by creating a simple hyper-localized social texing platform that emphesizes privacy and the importance of the personal connection.
-
-<table border="0">
  <tr>
-<tr>
     <td><b style="font-size:25px">Team and Key Roles</b></td>
     <td><b style="font-size:25px">Partners and Resources</b></td>
  </tr>
@@ -49,4 +42,7 @@ Our goal is to connect people with those around them in meaningfull ways to buil
     <td>Jonathan Segal - Founder and Front End Developer<br/>***REMOVED*** - Data Security<br/>***REMOVED*** - Backend Developer<br/> ***REMOVED*** - Backend Developer<br/>***REMOVED*** - Front End Developer<br/>***REMOVED*** - Cloud Architect</td>
     <td>At this point we do not have any partners or resources</td>
  </tr>
-</table>
+ </table>
+
+ ## **Milestones**
+Our goal is to connect people with those around them in meaningfull ways to build communities by creating a simple hyper-localized social texing platform that emphesizes privacy and the importance of the personal connection.
