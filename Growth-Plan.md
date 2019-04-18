@@ -1,7 +1,7 @@
 ## **Identity**
 Our goal is to connect people with those around them in meaningful ways to build communities by creating a simple hyper-localized social texting platform that emphasizes privacy and the importance of the personal connection. 
 
- ## **Milestones**
+## **Milestones**
 Can be found: [Plan of Action](Plan-of-Action)
 
 <table border="0">
