@@ -29,7 +29,7 @@ This is going to be a step by step process on how we are going to further the pr
     * followers
     * story
     * etc
-8. Incorporate as an LLC in Deleware
+8. Incorporate as an LLC
 
 9. Test with a limited number of users to see how the app is being used
     * based on user feedback make additional updates to the system.
