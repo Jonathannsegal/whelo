@@ -10,3 +10,6 @@ We are going to be using kanban, here is a site that explains what we are doing 
 How this is going to work is when you are working on the projects you will either choose a feature to implement and add it to the relevant trello board with pertaining information or look through the trello boards and work on an existing feature or issue.
 
 These trello tasks can be tied to merge requests which is a good way to keep track of what is currently being done, who is doing what, and what needs to be done.
+
+## Meetings
+Over the summer of 2019 meetings from all involved will take place on a bi-weekly basis at times that work for everyone.
