@@ -45,4 +45,4 @@ Our goal is to connect people with those around them in meaningfull ways to buil
  </table>
 
  ## **Milestones**
-Our goal is to connect people with those around them in meaningfull ways to build communities by creating a simple hyper-localized social texing platform that emphesizes privacy and the importance of the personal connection.
+Can be found: https://gitlab.com/projectpaperplane/information/wikis/Plan-of-Action
