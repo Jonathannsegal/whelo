@@ -8,6 +8,16 @@ website App in any browser (based on react)
 here's an article explaining this
 https://medium.com/@benoitvallon/a-mobile-desktop-and-website-app-with-the-same-code-dc84ef7677ee
 
+# Azure Stuff
+Azure!
+https://azure.microsoft.com/en-us/
+
+Azure Bus for messaging
+https://azure.microsoft.com/en-us/services/service-bus/
+
+Java or Node.js
+https://nextjs.org/ is a server side rendering enginer for react that works on both GCloud and Azure. We need to decide if we want to use this or a diffrent server side rendering tool.
+
 
 
 
