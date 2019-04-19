@@ -26,7 +26,7 @@ Can be found: [Plan of Action](Plan-of-Action)
     <td><b style="font-size:25px">Marketing Activities</b></td>
  </tr>
  <tr>
-    <td>Sales channels will need to be the least intrusive way to generate revenue through the platform while not getting in the way of the core service. Special packages could be bought such as animated profile pictures, enterprise versions of the software, etc.</td>
+    <td>Sales channels will need to be the least intrusive way to generate revenue through the platform while not getting in the way of the core service. Special packages could be bought such as animated profile pictures, enterprise versions of the software, etc. A sales strategy is also to utilize location data and make a way for small local buisnesses to advertize to those interested in specific things and that are physically in the range of the store, instad of relying on general data and broad advertizing more peronalized and location based marketing from buisnesses will make the platform feel personal.</td>
     <td>Marketing is going to be a challenge because there are so many platforms that don't have good rollouts and fail altogether. A full sales plan will be created after we have slightly more to work with but for the time being here is the barebones plan. After we have something we are proud of we do a limited rollout to a small metro area for testing to see how we can market such as billboards, word of mouth, online advertising, and other forms of promotion. Once we find a strategy that works try to replicate these efforts on a large scale. </td>
  </tr>
  <tr>
