@@ -103,7 +103,7 @@ Can be found: [Plan of Action](Plan-of-Action)
     <td><b style="font-size:25px">Partners and Resources</b></td>
  </tr>
  <tr>
-    <td>Jonathan Segal - Founder and Front End Developer<br/>***REMOVED*** - Data Security<br/>***REMOVED*** - Backend Developer<br/> ***REMOVED*** - Backend Developer<br/>***REMOVED*** - Front End Developer<br/>***REMOVED*** - Cloud Architect<br/>***REMOVED*** - Developer<br/>***REMOVED*** - Developer</td>
+    <td>Jonathan Segal - Founder and Front End Developer<br/>***REMOVED*** - Data Security<br/>***REMOVED*** - Backend Developer<br/> ***REMOVED*** - Backend Developer<br/>***REMOVED*** - Front End Developer<br/>***REMOVED*** - Cloud Architect<br/>***REMOVED*** - Developer<br/>***REMOVED*** - Developer<br/>***REMOVED*** - Developer</td>
     <td>At this point we do not have any partners or resources</td>
  </tr>
  </table>
