@@ -3,14 +3,12 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
   height: 20vmin;
   pointer-events: none;
 }
 
 .App-header {
   background-image: linear-gradient(to bottom right, #9EDBEA , #70C9C1);
-  /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,13 +20,4 @@
 
 .App-link {
   color: #4c4c4c;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
