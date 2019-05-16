@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import Chat from './Chat';
 import './App.css';
 
 class App extends Component {
@@ -12,6 +13,7 @@ class App extends Component {
             Whelo
           </p>
         </header>
+        <Chat/>
       </div>
     );
   }
