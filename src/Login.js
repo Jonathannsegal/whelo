@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Chat from './Chat';
+import login_button from './login_button.svg'
+import './login.css';
 
 
 var loggedIn = false;
@@ -35,14 +37,12 @@ class Login extends Component {
     renderWhat() {
         if (!loggedIn) {
             return (<div className="container">
-                <div className="main">
-                    <p>Please Login to chat (password = pass, username = user)</p>
-                    <form id="form_id" method="post" name="myform">
-                        <label>User Name : </label>
-                        <input type="text" name="username" id="username" />
-                        <label>Password : </label>
-                        <input type="password" name="password" id="password" />
-                        <input type="submit" value="Login" id="submit" onClick={this.process} />
+                <div className="main" id="loginform" align="center">
+                    <p id="title"><b>Please Login to chat (password = pass, username = user)</b></p>
+                    <form id="id01" method="post" name="myform">
+                        <input type="text" name="username" placeholder="Enter Username" id="username" required/>
+                        <input type="password" name="password" placeholder="Enter Password" id="password" required />
+                        <input type="image" src={login_button} value="Login" id="submit" alt="submit" onClick={this.process} />
                     </form>
                 </div>
             </div>);
