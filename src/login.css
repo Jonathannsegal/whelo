@@ -1,0 +1,29 @@
+
+  
+  /* Full-width inputs */
+  input[type=text], input[type=password] {
+    width: fit-content;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: flex;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  p[id=title]
+  {
+    width: fit-content;
+    display: flex;
+    position: relative;
+  }
+
+
+  input[id=submit]{
+    width: fit-content;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: flex;
+    position: relative;
+  }
+  
