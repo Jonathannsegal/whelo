@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Whelo",
+  "name": "A hyper localized pseudo anonymous group messaging app",
   "icons": [
     {
       "src": "favicon.ico",
