@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Chat from './Chat';
-import login_button from './login_button.svg'
-import './login.css';
+import login_button from '../images/login_button.svg'
+import '../stylesheets/login.css';
 
 
 var loggedIn = false;
@@ -27,9 +27,6 @@ class Login extends Component {
         }
         else {
             alert("Login unsuccessful");
-            //document.getElementById("username").disabled = true;
-            //document.getElementById("password").disabled = true;
-            //document.getElementById("submit").disabled = true;
             this.setState({ state: this.state });
             return false;
         }
