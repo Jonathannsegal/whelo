@@ -1,36 +1,40 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+//import Navigation from './Navigation'; if needing extra easy nav use this
+import LandingPage from './Landing';
+import SignUp from './SignUp'; //Not yet implemented
+import Login from './Login';
+import PasswordForget from './PasswordForget'; //Not yet implemented
+import Account from './Account'; //Not yet implemented
+import Chat from './Chat';
+
+import * as ROUTES from './routes';
+
 import logo from '../images/logo.svg';
-import Login from './Login'
 import '../stylesheets/App.css';
 
-function LogIn(){
-  return (<Login username = '' dummy = {null}/>);
-}
-
-function SignUp(){
-  return <h2>SignUp</h2>;
-}
 
 class App extends Component {
   render() {
     return (
       <Router>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p className="Title">
-            Whelo
+        <div>
+          {//if you want the Navigation bar showing up at the top of the page put in a call to <Navigation/> 
+          }
+          <header className="App-header">
+            <a href="/"><img src={logo} className="App-logo" alt="logo" /></a>
+            <p className="Title">
+              Whelo
           </p>
-        </header>
-      </div>
-
-      <Link to="/Login/">Login</Link> <br/>
-      <Link to="/Signup/">SignUp</Link>
-
-      <Route path="/Login/" component={LogIn} />
-      <Route path="/Signup/" component={SignUp} />
-
+          </header>
+          <Route exact path={ROUTES.LANDING} component={LandingPage} />
+          <Route path={ROUTES.SIGN_UP} component={SignUp} />
+          <Route path={ROUTES.LOGIN} component={Login} />
+          <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForget} />
+          <Route path={ROUTES.ACCOUNT} component={Account} />
+          <Route path={ROUTES.CHAT} component={Chat} />
+        </div>
       </Router>
     );
   }
