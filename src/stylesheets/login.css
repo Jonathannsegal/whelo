@@ -1,7 +1,7 @@
 
   
   /* Full-width inputs */
-  input[type=text], input[type=password] {
+  input[type=text][id=username], input[type=password][id=password] {
     width: fit-content;
     padding: 12px 20px;
     margin: 8px 0;

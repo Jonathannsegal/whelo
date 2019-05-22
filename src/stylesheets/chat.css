@@ -1,0 +1,14 @@
+input[type=text]{
+    width: fit-content;
+    padding: 12px 20px;
+    margin: 10px auto;
+    display: flex;
+    position: relative;
+  }
+
+  .centerButton{
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    position: relative;
+  }

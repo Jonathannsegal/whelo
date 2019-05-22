@@ -1,5 +1,6 @@
 import React from "react";
 import io from "socket.io-client";
+import "../stylesheets/chat.css"
 
 class Chat extends React.Component{
     constructor(props){
@@ -50,11 +51,11 @@ class Chat extends React.Component{
 
                             </div>
                             <div className="card-footer">
-                                <input disabled type="text" placeholder={this.state.username} value={this.state.username} onChange={ev => this.setState({username: ev.target.value})} className="form-control"/>
+                                <input disabled type="text" placeholder="Blank until the bakend user is set up" value={this.state.username} onChange={ev => this.setState({username: ev.target.value})} className="form-control"/>
                                 <br/>
                                 <input type="text" placeholder="Message" className="form-control" value={this.state.message} onChange={ev => this.setState({message: ev.target.value})}/>
                                 <br/>
-                                <button onClick={this.sendMessage} className="btn btn-primary form-control">Send</button>
+                                <button onClick={this.sendMessage} className="centerButton">Send</button>
                             </div>
                         </div>
                     </div>

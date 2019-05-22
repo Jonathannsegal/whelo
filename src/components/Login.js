@@ -1,43 +1,47 @@
 import React, { Component } from 'react';
-import Chat from './Chat';
 import login_button from '../images/login_button.svg'
 import '../stylesheets/login.css';
-
-
-var loggedIn = false;
 
 class Login extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            user: ''
+            user: props.username,
+            loggedIn: props.loggedIn,
         };
         this.process = this.process.bind(this);
     }
+
+    /**
+     * This is the handler for the login button that checks the form for the username and password and either sets the state or just alerts of incorrect information
+     */
     process = ev => {
         ev.preventDefault();
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
         if (username === "user" && password === "pass") {
             alert("Login successfully");
-            loggedIn = true;
-            this.setState({ state: this.state, user: username});
-            return false;
+            this.setState({ loggedIn: true, user: username });
+        }
+        else if (username === "user" && password !== "pass") {
+            alert("Password Incorrect");
         }
         else {
             alert("Login unsuccessful");
-            this.setState({ state: this.state });
-            return false;
         }
     }
-    renderWhat() {
-        if (!loggedIn) {
+
+    /**
+     * This fuction will render out either the chat page or the Login page based on if the user is logged in or not.
+     */
+    render() {
+        if (!this.state.loggedIn) {
             return (<div className="container">
                 <div className="main" id="loginform" align="center">
-                    <p id="title"><b>Please Login to chat (password = pass, username = user)</b></p>
+                    <p id="title"><b>Login (password = pass, username = user)</b></p>
                     <form id="id01" method="post" name="myform">
-                        <input type="text" name="username" placeholder="Enter Username" id="username" required/>
+                        <input type="text" name="username" placeholder="Enter Username" id="username" required />
                         <input type="password" name="password" placeholder="Enter Password" id="password" required />
                         <input type="image" src={login_button} value="Login" id="submit" alt="submit" onClick={this.process} />
                     </form>
@@ -45,16 +49,11 @@ class Login extends Component {
             </div>);
         }
         else
-            return <Chat username ={this.state.user} />;
-    }
-    render() {
-        return (
-            <div>{this.renderWhat()}</div>
-
-        );
+            return (<head>
+                <title>HTML Meta Tag</title>
+                <meta http-equiv = "refresh" content = "0; url = /chat/" />
+             </head>);
     }
 }
-
-
 
 export default Login;
