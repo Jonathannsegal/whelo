@@ -1,68 +1,63 @@
-import React from "react";
-import io from "socket.io-client";
-import "../stylesheets/chat.css"
+import React, { Component } from 'react';
+import { database } from './firebase';
 
-class Chat extends React.Component{
-    constructor(props){
-        super(props);
+export default class Chat extends Component {
+  constructor() {
+    super();
 
-        this.state = {
-            username: this.props.username,
-            message: '',
-            messages: []
-        };
+    this.state = {
+      messages: [],
+      username: ''
+    };
 
-        this.socket = io('localhost:5000');
+    this.onAddMessage = this.onAddMessage.bind(this);
+  }
 
-        this.socket.on('RECEIVE_MESSAGE', function(data){
-            addMessage(data);
-        });
+  componentWillMount() {
+    const username = localStorage.getItem('chat_username');
+    this.setState({username: username ? username : 'Unknown'})
+    const messagesRef = database.ref('messages')
+      .orderByKey()
+      .limitToLast(100);
 
-        const addMessage = data => {
-            console.log(data);
-            this.setState({messages: [...this.state.messages, data]});
-            console.log(this.state.messages);
-        };
+    messagesRef.on('value', snapshot => {
+      let messagesObj = snapshot.val();
+      let messages = [];
+      Object.keys(messagesObj).forEach(key =>  messages.push(messagesObj[key]));
+      messages = messages.map((message) => { return {text: message.text, user: message.user, id: message.key}})
+      this.setState(prevState => ({
+        messages: messages,
+      }));
+    });
+  }
 
-        this.sendMessage = ev => {
-            ev.preventDefault();
-            this.socket.emit('SEND_MESSAGE', {
-                author: this.state.username,
-                message: this.state.message
-            })
-            this.setState({message: ''});
+  onAddMessage(event) {
+    event.preventDefault();
+    database.ref('messages').push({text: this.input.value, user: this.state.username});
+    this.input.value = '';
+  }
 
-        }
-    }
-    render(){
-        return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-4">
-                        <div className="card">
-                            <div className="card-body">
-                                <div className="messages">
-                                    {this.state.messages.map(message => {
-                                        return (
-                                            <div>{message.author}: {message.message}</div>
-                                        )
-                                    })}
-                                </div>
-
-                            </div>
-                            <div className="card-footer">
-                                <input disabled type="text" placeholder="Blank until the bakend user is set up" value={this.state.username} onChange={ev => this.setState({username: ev.target.value})} className="form-control"/>
-                                <br/>
-                                <input type="text" placeholder="Message" className="form-control" value={this.state.message} onChange={ev => this.setState({message: ev.target.value})}/>
-                                <br/>
-                                <button onClick={this.sendMessage} className="centerButton">Send</button>
-                            </div>
-                        </div>
-                    </div>
+  render() {
+    return (
+      <div>
+        <div className="padding-13 messages-div">
+            <h2>Chat Messages</h2>
+            {this.state.messages.map((message) => {
+             const _class = message.user === this.state.username ? 'message-left container' : 'message-right container';
+            return (
+                <div className={_class}>
+                  <h6 className="name-heading">{message.user}</h6>
+                  <p className="marg-left-10">{message.text}</p>
+                  <span className="time-left"></span>
                 </div>
-            </div>
-        );
-    }
+            )
+            })}
+        </div>
+      <div className="container textarea-div">
+        <textarea className="text-area" ref={node => this.input = node}></textarea>
+        <button className="btn btn-info send-btn " onClick={this.onAddMessage}>Send</button>
+      </div>
+    </div>
+    );
+  }
 }
-
-export default Chat;
