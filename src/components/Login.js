@@ -37,7 +37,9 @@ class Login extends Component {
      */
     render() {
         if (!this.state.loggedIn) {
-            return (<div className="container">
+            return (
+            <div className="container">
+                <h1>Login</h1>
                 <div className="main" id="loginform" align="center">
                     <p id="title"><b>Login (password = pass, username = user)</b></p>
                     <form id="id01" method="post" name="myform">
@@ -46,6 +48,7 @@ class Login extends Component {
                         <input type="image" src={login_button} value="Login" id="submit" alt="submit" onClick={this.process} />
                     </form>
                 </div>
+                <h3>Forgot Password?</h3>
             </div>);
         }
         else

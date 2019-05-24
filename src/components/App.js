@@ -7,7 +7,7 @@ import SignUp from './SignUp'; //Not yet implemented
 import Login from './Login';
 import PasswordForget from './PasswordForget'; //Not yet implemented
 import Account from './Account'; //Not yet implemented
-import Chat from './Chat';
+import Chat from './Chat_old';
 
 import * as ROUTES from './routes';
 
@@ -20,14 +20,17 @@ class App extends Component {
     return (
       <Router>
         <div>
+          {this.props.children}
+        </div>
+        <div>
           {//if you want the Navigation bar showing up at the top of the page put in a call to <Navigation/> 
           }
-          <header className="App-header">
+          {/* <header className="App-header">
             <a href="/"><img src={logo} className="App-logo" alt="logo" /></a>
             <p className="Title">
               Whelo
           </p>
-          </header>
+          </header> */}
           <Route exact path={ROUTES.LANDING} component={LandingPage} />
           <Route path={ROUTES.SIGN_UP} component={SignUp} />
           <Route path={ROUTES.LOGIN} component={Login} />

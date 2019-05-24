@@ -4,3 +4,4 @@ export const LOGIN = '/login/';
 export const CHAT = '/chat/'
 export const ACCOUNT = '/account/';
 export const PASSWORD_FORGET = '/pw-forget/';
+export const DISCOVER = '/discover/';

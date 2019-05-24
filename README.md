@@ -8,17 +8,15 @@ website App in any browser (based on react)
 here's an article explaining this
 https://medium.com/@benoitvallon/a-mobile-desktop-and-website-app-with-the-same-code-dc84ef7677ee
 
-# Azure Stuff
-Azure!
-https://azure.microsoft.com/en-us/
+# Firebase Stuff
+Yes we are using firebase now, its exciting and already has bace implementation set up!
+https://console.firebase.google.com/u/0/project/***REMOVED***/overview
 
-Azure Bus for messaging
-https://azure.microsoft.com/en-us/services/service-bus/
+Firebase seems like a much better option than azure it is easier to set up for something like what we are doing and in the short term is cheap to use we might migrate away eventually but it is a great tool to get out backend off the ground.
 
-Java or Node.js
-https://nextjs.org/ is a server side rendering enginer for react that works on both GCloud and Azure. We need to decide if we want to use this or a diffrent server side rendering tool.
-
-
+I used these resources to help set it up if you are confused how it is integrated this is a great read.
+https://medium.com/@rkhurram343/chatting-app-with-reactjs-and-firebase-realtime-database-5ccf2bd3dd0f <br><br>
+https://github.com/ranakhurram666/react-firebase-chat-app
 
 
 # React Stuff
