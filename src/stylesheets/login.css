@@ -1,5 +1,8 @@
 
-  
+  body {
+	  background-color: #4dc3ff;
+	  color: #FFFFFF;
+  }
   /* Full-width inputs */
   input[type=text][id=username], input[type=password][id=password] {
     width: fit-content;
@@ -15,15 +18,22 @@
   {
     width: fit-content;
     display: flex;
-    position: relative;
+	position: center;
   }
 
 
   input[id=submit]{
-    width: fit-content;
+	border-radius: 12px;
+    width: 95%;
     padding: 12px 20px;
     margin: 8px 0;
     display: flex;
-    position: relative;
+    position: center;
+	background-color: #FFFFFF;
+	color: #4dc3ff;
+	font-size: 16px;
+	display:inline-block;
+	border: none;
+	font-weight: bold;
   }
   
