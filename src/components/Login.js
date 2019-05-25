@@ -34,18 +34,20 @@ class Login extends Component {
 
     /**
      * This fuction will render out either the chat page or the Login page based on if the user is logged in or not.
+	 * Username: user
+	 * Password: pass
      */
     render() {
         if (!this.state.loggedIn) {
             return (
             <div className="container">
-                <h1 align="left">Login</h1>
-                <div className="main" id="loginform" align="center">
-                    <p id="title"><b>Login (password = pass, username = user)</b></p>
+                <h1 id="header" align="left">Login</h1>
+                <div className="main" id="loginform">
+                    <p id="title"></p>
                     <form id="id01" method="post" name="myform">
                         <input type="text" name="username" placeholder="Enter Username" id="username" required />
                         <input type="password" name="password" placeholder="Enter Password" id="password" required />
-                        <input type="button" src={login_button} value="Login" id="submit" alt="submit" onClick={this.process} />
+                        <input type="button" src={login_button} align="center" value="Login" id="submit" alt="submit" onClick={this.process} />
                     </form>
                 </div>
                 <h3>Forgot Password?</h3>
