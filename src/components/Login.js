@@ -39,13 +39,13 @@ class Login extends Component {
         if (!this.state.loggedIn) {
             return (
             <div className="container">
-                <h1>Login</h1>
+                <h1 align="left">Login</h1>
                 <div className="main" id="loginform" align="center">
                     <p id="title"><b>Login (password = pass, username = user)</b></p>
                     <form id="id01" method="post" name="myform">
                         <input type="text" name="username" placeholder="Enter Username" id="username" required />
                         <input type="password" name="password" placeholder="Enter Password" id="password" required />
-                        <input type="image" src={login_button} value="Login" id="submit" alt="submit" onClick={this.process} />
+                        <input type="button" src={login_button} value="Login" id="submit" alt="submit" onClick={this.process} />
                     </form>
                 </div>
                 <h3>Forgot Password?</h3>
