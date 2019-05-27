@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { database } from './firebase';
+import '../stylesheets/chat.css';
 
 export default class Chat extends Component {
   constructor() {
@@ -41,13 +42,13 @@ export default class Chat extends Component {
     return (
       <div>
         <div className="padding-13 messages-div">
-            <h2>Chat Messages</h2>
+            <h2 id="header">Chat Messages</h2>
             {this.state.messages.map((message) => {
              const _class = message.user === this.state.username ? 'message-left container' : 'message-right container';
             return (
                 <div className={_class}>
-                  <h6 className="name-heading">{message.user}</h6>
-                  <p className="marg-left-10">{message.text}</p>
+                  <h6 className="name-heading" id="displayName">{message.user}</h6>
+                  <p className="marg-left-10" id="displayMessage">{message.text}</p>
                   <span className="time-left"></span>
                 </div>
             )
