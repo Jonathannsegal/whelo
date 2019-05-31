@@ -1,9 +1,41 @@
-input[type=text]{
+body {
+	  background-color: #FFFFFF;
+	  color: #4dc3ff;
+  }
+
+ p[id=displayMessage]
+  {
     width: fit-content;
-    padding: 12px 20px;
-    margin: 10px auto;
+    padding-top: 2px;
+	padding-bottom: 6px;
+	padding-left: 12px;
+	padding-right: 12px;
+    margin-left: auto;
+	margin-right: auto;
+	margin-top: 1px;
+	display: flex;
+    position: relative;
+	border-left-style: solid;
+	border-color: 8px #4dc3ff;
+	background-color: #A6E1FF;
+	color: #4C4C4C;
+	border-radius: 5px;
+  }
+  
+  h6[id=displayName]
+  {
+    width: fit-content;
+    padding-top: 1px;
+    margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1px;
     display: flex;
     position: relative;
+	color: #000000;
+  }
+
+  h2[id=header]{
+    text-shadow: 1px 1px 0 #484848, 1px -1px 0 #484848, -1px 1px 0 #484848, -1px -1px 0 #484848, 1px 0px 0 #484848, 0px 1px 0 #484848, -1px 0px 0 #484848, 0px -1px 0 #484848;
   }
 
   .centerButton{
@@ -12,3 +44,5 @@ input[type=text]{
     display: flex;
     position: relative;
   }
+  
+ 
