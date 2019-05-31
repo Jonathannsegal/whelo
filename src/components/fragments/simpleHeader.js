@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import logo from '../images/logo.svg';
-import '../stylesheets/App.css';
+import logo from '../../images/logo.svg';
+import '../../stylesheets/App.css';
 
-class simple_header extends Component {
+class simpleHeader extends Component {
     render() {
         return (
             <header className="App-header">
@@ -12,4 +12,4 @@ class simple_header extends Component {
         );
     }
 }
-export default simple_header
+export default simpleHeader

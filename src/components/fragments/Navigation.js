@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import * as ROUTES from './routes';
+import * as ROUTES from '../../utils/routes';
 
 /**
  * This is just used for devlopment to get around the site with ease DO NOT PUT IN FINAL RELEASE UNLESS CHANGED FROM 5/20/19
