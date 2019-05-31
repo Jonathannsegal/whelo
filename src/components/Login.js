@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import login_button from '../images/login_button.svg'
 import '../stylesheets/login.css';
 
 class Login extends Component {
@@ -47,7 +46,7 @@ class Login extends Component {
                     <form id="id01" method="post" name="myform">
                         <input type="text" name="username" placeholder="Enter Username" id="username" required />
                         <input type="password" name="password" placeholder="Enter Password" id="password" required />
-                        <input type="button" src={login_button} align="center" value="Login" id="submit" alt="submit" onClick={this.process} />
+                        <input type="button" align="center" value="Login" id="submit" alt="submit" onClick={this.process} />
                     </form>
                 </div>
                 <h3>Forgot Password?</h3>
