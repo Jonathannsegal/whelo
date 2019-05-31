@@ -4,30 +4,18 @@
 	  color: #FFFFFF;
   }
   /* Full-width inputs */
-<<<<<<< HEAD
-  input[type=text][id=username], input[type=password][id=password], input[type=text] {
-=======
   input[type=text][id=username], input[type=password][id=password], input[type=text][id=email], input[type=text] {
->>>>>>> Firebase-login-verification&cleanup
     width: fit-content;
     padding: 12px 20px;
     display: flex;
     border: 1px solid #ccc;
     box-sizing: border-box;
     position: relative;
-<<<<<<< HEAD
-	background-color: #4dc3ff;
-	border: none;
-	border-bottom: 2px solid white;
-	margin: 1% 2.5%;
-	color: white;
-=======
     background-color: #52c1e4;
     border: none;
 	  border-bottom: 2px solid white;
 	  margin: 1% 2.5%;
 	  color: white;
->>>>>>> Firebase-login-verification&cleanup
   }
 
   p[id=title]
