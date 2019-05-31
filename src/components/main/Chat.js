@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD:src/components/Chat.js
-import { database } from './firebase';
-import '../stylesheets/chat.css';
-=======
 import { database } from '../../utils/firestore';
->>>>>>> Firebase-login-verification&cleanup:src/components/main/Chat.js
 
 export default class Chat extends Component {
   constructor() {
