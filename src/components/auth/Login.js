@@ -54,7 +54,7 @@
 // export default Login;
 
 import React, { Component } from 'react';
-// import login_button from '../../images/login_button.svg'
+import { signIn } from '../../store/actions/authActions'
 import '../../stylesheets/login.css';
 
 class Login extends Component {

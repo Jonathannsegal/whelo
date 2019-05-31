@@ -57,7 +57,7 @@
 // }
 
 import React from 'react';
-import firestore from "../../utils/firestore.js";
+// import firestore from "../../utils/firestore.js";
 class SignUp extends React.Component {
   constructor() {
     super();
