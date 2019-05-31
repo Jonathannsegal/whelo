@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { database } from './firebase';
+import { database } from '../../utils/firestore';
 
 export default class User extends Component {
   constructor() {

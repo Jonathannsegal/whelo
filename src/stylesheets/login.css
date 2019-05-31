@@ -1,28 +1,40 @@
 
   body {
-	  background-color: #4dc3ff;
+    background-color: #52c1e4;
 	  color: #FFFFFF;
   }
   /* Full-width inputs */
+<<<<<<< HEAD
   input[type=text][id=username], input[type=password][id=password], input[type=text] {
+=======
+  input[type=text][id=username], input[type=password][id=password], input[type=text][id=email], input[type=text] {
+>>>>>>> Firebase-login-verification&cleanup
     width: fit-content;
     padding: 12px 20px;
     display: flex;
     border: 1px solid #ccc;
     box-sizing: border-box;
     position: relative;
+<<<<<<< HEAD
 	background-color: #4dc3ff;
 	border: none;
 	border-bottom: 2px solid white;
 	margin: 1% 2.5%;
 	color: white;
+=======
+    background-color: #52c1e4;
+    border: none;
+	  border-bottom: 2px solid white;
+	  margin: 1% 2.5%;
+	  color: white;
+>>>>>>> Firebase-login-verification&cleanup
   }
 
   p[id=title]
   {
     width: fit-content;
     display: flex;
-	position: center;
+	  position: center;
   }
 
 
@@ -33,12 +45,16 @@
     margin: 8px 0;
     display: flex;
     position: center;
-	background-color: #FFFFFF;
-	color: #4dc3ff;
-	font-size: 16px;
-	display:inline-block;
-	border: none;
-	font-weight: bold;
+	  background-color: #FFFFFF;
+    background-color: #52c1e4;
+    font-size: 16px;
+	  display:inline-block;
+	  border: none;
+	  font-weight: bold;
+  }
+  
+  h1[id=header]{
+	  text-indent: 2.5%;
   }
   
   h1[id=header]{
