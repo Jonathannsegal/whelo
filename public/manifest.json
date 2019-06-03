@@ -1,6 +1,6 @@
 {
-  "short_name": "Whelo",
-  "name": "A hyper localized pseudo anonymous group messaging app",
+  "short_name": "Whelo-web",
+  "name": "Whelo-web",
   "icons": [
     {
       "src": "favicon.ico",

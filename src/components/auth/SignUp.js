@@ -1,91 +1,159 @@
-// import React, { Component } from 'react';
-// import {database} from '../../utils/firebase';
+import React, { Component } from 'react';
+import { withFirebase } from '../Firebase';
+import * as ROUTES from '../../constants/routes';
+import {ERROR_CODE_ACCOUNT_EXISTS, ERROR_MSG_ACCOUNT_EXISTS} from '../../constants/errors';
+import { withRouter } from 'react-router-dom';
+import {
+	Card,
+	Alert,
+	Container,
+	Row,
+	Col,
+	CardTitle,
+	Button,
+	Form,
+	FormGroup,
+	Label,
+	Input,
+	CardSubtitle
+} from 'reactstrap';
 
-// export default class SignUp extends Component {
-//   constructor() {
-//     super();
+const INITIAL_STATE = {
+	username: '',
+	email: '',
+	passwordOne: '',
+	passwordTwo: '',
+	error: null,
+};
 
-//     this.state = {
-//       users: [],
-//       password: '',
-//       username: ''
-//     };
-//   }
+class signUpForm extends Component {
+		constructor(props) {
+				super(props);
+		
+				this.state = { ...INITIAL_STATE };
+		}
 
-//   componentWillMount() {
-//     const userRef = database.ref('users')
-//       .orderByKey()
-//       .limitToLast(100);
+		onSubmit = event => {
+				console.log("Submitted");
+				const { username, email, passwordOne } = this.state;
+		
+				this.props.firebase
+					.doCreateUserWithEmailAndPassword(email, passwordOne)
+					.then(authUser => {
+						// Create a user in your Firebase realtime database
+						return this.props.firebase.user(authUser.user.uid).set(
+							{
+								username,
+								email,
+							},
+							{ merge: true },
+						);
+					})
+					.then(() => {
+						return this.props.firebase.doSendEmailVerification(); //This is causing the issue and not letting you pass to the chat page
+					})
+					.then(() => {
+						this.setState({ ...INITIAL_STATE });
+						this.props.history.push(ROUTES.CHAT);
+					})
+					.catch(error => {
+						if (error.code === ERROR_CODE_ACCOUNT_EXISTS) {
+							error.message = ERROR_MSG_ACCOUNT_EXISTS;
+						}
+		
+						this.setState({ error });
+					});
+		
+				event.preventDefault();
+		};
 
-//     userRef.once('value', snapshot => {
-//       const users = [snapshot.val()];
-//       this.setState({users: users});
-//     });
-//   }
+		onChange = event => {
+			this.setState({ [event.target.name]: event.target.value });
+		};
 
-//   onNameChange(e) {
-//     this.setState({username: e.target.value})
-//   }
-//   onPassChange(e) {
-//     this.setState({password: e.target.value})
-//   }
+	render() {
+		const {
+			username,
+			email,
+			passwordOne,
+			passwordTwo,
+			error,
+		} = this.state;
+	
+		const isInvalid =
+			passwordOne !== passwordTwo ||
+			passwordOne === '' ||
+			email === '' ||
+			username === '';
 
-//   onAddClick(e) {
-//     e.preventDefault();
-//     database.ref('users').push({password: this.state.password, username: this.state.username,});
-//     console.log(this.state.username);
-//     console.log(this.state.password);
-//     localStorage.setItem('chat_username', this.state.username);
-//     this.props.history.push('/chat');
-//   }
+		return (
+			<Container>
+					<Row>
+					<Col sm="12" md={{ size: 6, offset: 3 }}>
+							<Card body>
+									<CardTitle tag="h3" className="text-center">Sign Up</CardTitle>
+									<CardSubtitle tag="h6" >Sign Up does not redirect you yet but it does create an account you have to Sign In to get to chat</CardSubtitle>
+									<Form onSubmit={this.onSubmit}>
+											<FormGroup>
+											<Label for="name">Name</Label>
+											<Input
+												id="username" 
+												name="username"
+												value={username}
+												onChange={this.onChange}
+												autoComplete="username"
+												type="text"
+												placeholder="Name" />
+											</FormGroup>
+											<FormGroup>
+											<Label for="email">Email</Label>
+											<Input
+												id="email"
+												name="email"
+												value={email}
+												onChange={this.onChange}
+												autoComplete="email"
+												type="email" 
+												placeholder="Email" />
+											</FormGroup>
+											<FormGroup>
+											<Label for="passwordOne">Password</Label>
+											<Input 
+												id="passwordOne"
+												name="passwordOne"
+												value={passwordOne}
+												onChange={this.onChange}
+												autoComplete="new-password"
+												type="password"
+												placeholder="Password" />
+											</FormGroup>
+											<FormGroup>
+											<Label for="passwordTwo">Password</Label>
+											<Input 
+												id="passwordTwo"
+												name="passwordTwo"
+												value={passwordTwo}
+												onChange={this.onChange}
+												autoComplete="new-password"
+												type="password"
+												placeholder="Confirm Password" />
+											</FormGroup>
+											{error ? <Alert color="danger" >{error.message}</Alert> : null }
+											<Button
+												disabled={isInvalid}
+												type="submit"
+												color="success"
+												>Sign Up
+											</Button>
+									</Form>
+							</Card>
+					</Col>
+					</Row>
+			</Container>
+		);
+	}
+}
 
-//   render() {
-//     return(
-//     <div className="form-group col-md-4">
-//       <h1>SignUp</h1>
-//       <p>Check the databace to see me added:<br/><a href="https://console.firebase.google.com/u/0/project/***REMOVED***/database/***REMOVED***/data" target="_blank">Database</a></p>
-//       <label >Username: </label>
-//         <input className="form-control input-sm" id="inputsm" type="text" onChange={this.onNameChange.bind(this)}/>
-//         <br/>
-//       <label >Password: </label>
-//         <input className="form-control input-sm" id="inputsm" type="text" onChange={this.onPassChange.bind(this)}/>
-//         <br/>
-//         <button className="btn btn-info" onClick={this.onAddClick.bind(this)}>SignUp</button>
-//     </div>
-//     );
-//   }
-// }
+const signUp = withRouter(withFirebase(signUpForm));
 
-import React from 'react';
-// import firestore from "../../utils/firestore.js";
-class SignUp extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-     email: "",
-     fullname: ""
-    };
-  }
-
-  render() {
-    return (
-        <form>
-          <input
-            type="text"
-            name="fullname"
-            placeholder="Full name"
-            onChange={this.updateInput}
-          />
-          <br/>
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            onChange={this.updateInput}
-          /> <br/>
-          <button type="submit">Submit</button>
-        </form>
-        );
-      }
-   }
-export default SignUp;
+export default signUp;
