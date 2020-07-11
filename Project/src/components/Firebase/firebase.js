@@ -3,13 +3,13 @@ import 'firebase/auth';
 import 'firebase/firestore';
 
 const config = {
-	apiKey: "***REMOVED***",
-	authDomain: "***REMOVED***",
-	databaseURL: "***REMOVED***",
-	projectId: "***REMOVED***",
-	storageBucket: "***REMOVED***.appspot.com",
-	messagingSenderId: "***REMOVED***",
-	appId: "1:***REMOVED***:web:569b700917c7de8a"
+	apiKey: process.env.KEY,
+	authDomain: process.env.DOMAIN,
+	databaseURL: process.env.URL,
+	projectId: process.env.PROJECTID,
+	storageBucket: process.env.BUCKET,
+	messagingSenderId: process.env.MESSAGEID,
+	appId: process.env.APPID
 };
 
 class Firebase {

@@ -10,7 +10,7 @@ https://medium.com/@benoitvallon/a-mobile-desktop-and-website-app-with-the-same-
 
 # Firebase Stuff
 Yes we are using firebase now, its exciting and already has bace implementation set up!
-https://console.firebase.google.com/u/0/project/***REMOVED***/overview
+https://console.firebase.google.com/u/0/project/whelo-web/overview
 
 Firebase seems like a much better option than azure it is easier to set up for something like what we are doing and in the short term is cheap to use we might migrate away eventually but it is a great tool to get out backend off the ground.
 
