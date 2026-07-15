@@ -1,5 +1,7 @@
 # Recap of my experience building a startup
 
+> **Archived:** This repository is a retrospective and historical project record, not an active product.
+
 ![Whelo](/Project/public/whelo.jpeg)
 
 > Just because you don’t succeed, doesn't mean that it was not a valuable experience. This was the case for my college startup.
