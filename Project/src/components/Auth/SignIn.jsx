@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 import { withRouter, Link } from 'react-router-dom';
-import { compose } from 'recompose';
+import { compose } from '../../utils/compose';
 import {
     Alert,
     Card,
