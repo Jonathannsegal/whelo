@@ -1,15 +1,15 @@
-import app from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/firestore';
+import app from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 const config = {
-	apiKey: process.env.KEY,
-	authDomain: process.env.DOMAIN,
-	databaseURL: process.env.URL,
-	projectId: process.env.PROJECTID,
-	storageBucket: process.env.BUCKET,
-	messagingSenderId: process.env.MESSAGEID,
-	appId: process.env.APPID
+	apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+	authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+	databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+	projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+	storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+	messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+	appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 class Firebase {
@@ -41,7 +41,7 @@ class Firebase {
 
 	doSendEmailVerification = () =>
 		this.auth.currentUser.sendEmailVerification({
-			url: process.env.REACT_APP_CONFIRMATION_EMAIL_REDIRECT,
+			url: import.meta.env.VITE_CONFIRMATION_EMAIL_REDIRECT,
 		});
 
 	doPasswordUpdate = password =>
